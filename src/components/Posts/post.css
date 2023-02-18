@@ -1,0 +1,51 @@
+.Page{
+    padding:5px 20px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    
+}
+
+.Post{
+    width:23%;
+    border:1px solid white;
+    border-radius:10px;
+    height:400px;
+    margin-top:20px;
+    margin-right:10px;
+}
+
+p{
+    margin-top:5px;
+    margin-left:5px;
+}
+
+img{
+    border-radius:10px;
+}
+
+.like{
+  margin-left:8px;
+  margin-top:12px;
+  outline:none;
+  border:1px solid white;
+  width:50%;
+  height:25px;
+  border-radius:10px;
+  width:90%;
+}
+
+.load-more{
+    margin-top:30px;
+    margin-bottom:30px;
+    width:20%;
+    height:30px;
+    outline:none;
+    border:1px solid white;
+    color:black;
+    background-color: white;
+    border-radius:20px;
+    position:relative;
+    left:40%;
+}
