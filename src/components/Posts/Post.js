@@ -6,7 +6,12 @@ const Post = ({apiData,limit}) => {
 
     useEffect(() => {
         // initialize the posts state with the apiData array
-        setPosts(apiData.map(post => ({...post, likes: 0})));
+        setPosts(apiData.map((post) => 
+        {
+            console.log({...post,likes:0})
+            return {...post, likes: 0};//adding likes with old property of list
+        }
+        ));
     }, [apiData]);
 
     const handleLike = (index) => {
