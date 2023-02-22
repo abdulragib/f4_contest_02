@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import "./post.css"
 
-const Post = ({apiData,limit}) => {
+const Post = ({apiData,limit,imgUrl}) => {
     const [posts, setPosts] = useState([]);
+
 
     useEffect(() => {
         // initialize the posts state with the apiData array
@@ -22,13 +23,15 @@ const Post = ({apiData,limit}) => {
         // update the state with the newPosts array
         setPosts(newPosts);
     };
+
+
     return (
         <div className="Page">
              {
                 posts.map((post,index) => {
                     return (
                         <div className="Post" key={index}>
-                            <img src=" https://picsum.photos/200?random=${post.id}" width="280px" height="60%"></img>
+                            <img src={`https://picsum.photos/200?random=${post.id}`} width="280px" height="60%" alt="post-img"></img>
                             <p>User Id : {post.id}</p>
                             <p>Title : {post.title}</p>
                             <p>Likes: {post.likes}</p>

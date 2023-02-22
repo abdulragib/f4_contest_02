@@ -10,7 +10,9 @@ const Search = ({data,setData}) => {
       const filteredData = data.filter((item) => {
         return item.title.toLowerCase().includes(search.toLowerCase());
       });
-      setData(filteredData);
+
+        setData(filteredData);
+
      },[search]);
 
   return (
